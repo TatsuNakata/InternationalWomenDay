@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Lời Chúc 8/3</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-family:'Segoe UI';
+    background:url("../yeye.jpg");
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+/* khung lời chúc */
+.container{
+    color:white;
+    background:rgba(0,0,0,0.25);
+    padding:40px 60px;
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+    animation:fadeIn 2s ease;
+}
+
+h1{
+    font-size:45px;
+    font-style:italic;
+    animation:glow 2s infinite alternate;
+}
+
+p{
+    font-size:22px;
+    margin-top:20px;
+    animation:floatText 3s infinite ease-in-out;
+}
+
+/* animation chữ */
+@keyframes glow{
+from{ text-shadow:0 0 10px white,0 0 20px pink;}
+to{ text-shadow:0 0 20px white,0 0 40px hotpink;}
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes floatText{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+
+/* hoa rơi */
+.flower{
+position:absolute;
+top:-50px;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1> Mừng Ngày 8/3 🌸</h1>
+
+<p>
+Em chúc các chị em trong server một ngày 8/3 thật vui và thật nhiều năng lượng nheee
+</p>
+
+<p>
+Mong là mọi người luôn xinh đẹp, hạnh phúc và gặp thật nhiều điều tốt đẹp trong cuộc sống.
+</p>
+
+<p>
+Chúc cho những dự định sắp tới của mọi người đều thuận lợi và thành công nữa 🌸
+</p>
+
+</div>
+
+<script>
+
+function createFlower(){
+const flower=document.createElement("div");
+flower.classList.add("flower");
+flower.innerHTML="🌸";
+
+flower.style.left=Math.random()*100+"vw";
+flower.style.animationDuration=(3+Math.random()*5)+"s";
+flower.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},8000);
+}
+
+setInterval(createFlower,400);
+
+</script>
+
+</body>
+</html>

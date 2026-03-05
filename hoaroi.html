@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Hoa Rơi</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:Segoe UI;
+background-image:url("../minecraft.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+h1{
+color:white;
+font-size:45px;
+text-shadow:0 0 10px pink;
+z-index:2;
+}
+
+/* Hoa */
+
+.hoa{
+position:fixed;
+top:-50px;
+font-size:25px;
+animation:roi linear infinite;
+}
+
+@keyframes roi{
+0%{
+transform:translateY(-50px);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Hoa Cho Ngày 8/3 🌸</h1>
+
+<script>
+
+function taoHoa(){
+const hoa = document.createElement("div");
+hoa.classList.add("hoa");
+hoa.innerHTML="🌸";
+
+hoa.style.left=Math.random()*100+"vw";
+hoa.style.animationDuration=(3+Math.random()*5)+"s";
+
+document.body.appendChild(hoa);
+
+setTimeout(()=>{
+hoa.remove();
+},8000);
+
+}
+
+setInterval(taoHoa,300);
+
+</script>
+
+</body>
+</html>
