@@ -7,53 +7,76 @@
 <style>
 
 body{
-    margin:0;
-    padding:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    font-family:'Segoe UI';
-    background:url("yeye.jpg");
-    background-size:cover;
-    background-position:center;
-    overflow:hidden;
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:'Segoe UI';
+background:url("yeye.jpg");
+background-size:cover;
+background-position:center;
+overflow:hidden;
 }
 
 /* khung lời chúc */
+
 .container{
-    color:white;
-    background:rgba(0,0,0,0.25);
-    padding:40px 60px;
-    border-radius:20px;
-    backdrop-filter:blur(5px);
-    animation:fadeIn 2s ease;
+color:white;
+background:rgba(0,0,0,0.25);
+padding:40px 60px;
+border-radius:20px;
+backdrop-filter:blur(5px);
+animation:fadeIn 2s ease;
 }
 
-
+/* tiêu đề */
 
 h1{
-    font-size:45px;
-    font-style:italic;
-    animation:glow 2s infinite alternate;
+font-size:45px;
+font-style:italic;
+margin-bottom:20px;
+animation:floatText 3s ease-in-out infinite;
 }
+
+/* chữ tiêu đề chuyển màu */
+
+.tieude{
+background:linear-gradient(270deg,#ff6ec7,#ff9a9e,#fbc2eb,#ffd6ff);
+background-size:400%;
+-webkit-background-clip:text;
+color:transparent;
+animation:mauchay 8s linear infinite;
+}
+
+/* icon hoa */
+
+.icon{
+color:white;
+text-shadow:0 0 10px pink;
+}
+
+/* lời chúc */
 
 p{
-    font-size:22px;
-    margin-top:20px;
-    animation:floatText 3s infinite ease-in-out;
+font-size:22px;
+margin-top:20px;
+animation:floatText 3s infinite ease-in-out;
 }
 
-/* animation chữ */
-@keyframes glow{
-from{ text-shadow:0 0 10px white,0 0 20px pink;}
-to{ text-shadow:0 0 20px white,0 0 40px hotpink;}
-}
+/* animation */
 
 @keyframes fadeIn{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 @keyframes floatText{
@@ -61,13 +84,23 @@ to{opacity:1; transform:translateY(0);}
 50%{transform:translateY(-8px);}
 100%{transform:translateY(0);}
 }
+
+@keyframes mauchay{
+0%{background-position:0%}
+100%{background-position:400%}
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
-<h1> Mừng Ngày 8/3 🌸</h1>
+
+<h1>
+<span class="tieude">Mừng Ngày 8/3</span>
+<span class="icon">🌸</span>
+</h1>
 
 <p>
 Em chúc các chị em trong server một ngày 8/3 thật vui và thật nhiều năng lượng nheee
@@ -83,31 +116,5 @@ Chúc cho những dự định sắp tới của mọi người đều thuận l
 
 </div>
 
-<script>
-
-function createFlower(){
-const flower=document.createElement("div");
-flower.classList.add("flower");
-flower.innerHTML="🌸";
-
-flower.style.left=Math.random()*100+"vw";
-flower.style.animationDuration=(3+Math.random()*5)+"s";
-flower.style.fontSize=(20+Math.random()*20)+"px";
-
-document.body.appendChild(flower);
-
-setTimeout(()=>{
-flower.remove();
-},8000);
-}
-
-setInterval(createFlower,400);
-
-</script>
-
 </body>
-
 </html>
-
-
-
