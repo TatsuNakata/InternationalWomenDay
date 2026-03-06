@@ -14,12 +14,12 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-family:Segoe UI;
-background-image:url("minecraft.jpg");
+background-image:url("yeye.jpg");
 background-size:cover;
 background-position:center;
 }
 
-/* khung lời chúc */
+/* khung */
 
 .container{
 color:white;
@@ -37,20 +37,18 @@ animation:fadeIn 2s;
 
 h1{
 font-size:45px;
-margin-bottom:20px;
 font-style:italic;
-}
+margin-bottom:20px;
 
-/* chữ chuyển màu pastel */
-
-.text{
 background:linear-gradient(270deg,#ff9ecf,#ffd1e8,#ffe4f3,#ff9ecf);
 background-size:400%;
 -webkit-background-clip:text;
 color:transparent;
+
 animation:mauchay 10s linear infinite;
-text-shadow:0 0 10px rgba(255,255,255,0.3);
 }
+
+/* gradient chạy */
 
 @keyframes mauchay{
 0%{background-position:0%}
@@ -62,13 +60,14 @@ text-shadow:0 0 10px rgba(255,255,255,0.3);
 p{
 font-size:22px;
 margin:15px 0;
-animation:floatText 4s ease-in-out infinite;
 }
 
-@keyframes floatText{
-0%{transform:translateY(0);}
-50%{transform:translateY(-5px);}
-100%{transform:translateY(0);}
+/* hàng icon hoa */
+
+.flower-row{
+margin-top:20px;
+font-size:26px;
+letter-spacing:6px;
 }
 
 /* hoa rơi */
@@ -116,7 +115,7 @@ transform:translateY(0);
 
 <div class="container">
 
-<h1 class="text">Mừng Ngày 8/3 🌸</h1>
+<h1>Mừng Ngày 8/3 🌸</h1>
 
 <p>
 Em chúc các chị em trong server một ngày 8/3 thật vui và thật nhiều năng lượng nheee
@@ -129,6 +128,10 @@ Mong là mọi người luôn xinh đẹp, hạnh phúc và gặp thật nhiều
 <p>
 Chúc cho những dự định sắp tới của mọi người đều thuận lợi và thành công nữa 🌸
 </p>
+
+<div class="flower-row">
+🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸
+</div>
 
 </div>
 
